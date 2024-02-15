@@ -12,11 +12,27 @@
         .wrap .bg:nth-child(2) {background-color:lemonchiffon;}
         .wrap .bg:nth-child(3) {background-color:papayawhip;}
         .wrap .bg:nth-child(4) {background-color:peachpuff;}
+        .wrap .bg #tab {position:absolute; top:30px; left:30px}
+        .wrap .bg #tab .tab_title {margin-bottom:20px;}
+        .wrap .bg #tab .tab_title a {}
+        .wrap .bg #tab .tab_contents {}
+        .wrap .bg #tab .tab_contents .con {}
     </style>
 </head>
 <body>
     <div class="wrap">
-        <div class="bg section s1"></div>
+        <div class="bg section s1">
+            <div id="tab">
+                <div class="tab_title">
+                    <a href="#">제목1</a>
+                    <a href="#">제목2</a>
+                </div>
+                <div class="tab_contents">
+                    <div class="con con1">제이쿼리는 자바스크립트 라이브러리입니다.</div>
+                    <div class="con con2">제이쿼리는 DOM 이벤트와 스타일을 자바스크립트보다 쉽게 제작할 수 있습니다</div>
+                </div>
+            </div>
+        </div>
         <div class="bg section s2"></div>
         <div class="bg section s3"></div>
         <div class="bg section s4"></div>
@@ -27,6 +43,15 @@
         $('.wrap').fullpage({
             scrollBar:true,
             scrollingSpeed:500,
+        })
+        $('.con2').hide();
+        $('.tab_title a:nth-child(1)').on('click',function(){
+            $('.con1').show()
+            $('.con2').hide();
+        })
+        $('.tab_title a:nth-child(2)').on('click',function(){
+            $('.con1').hide()
+            $('.con2').show();
         })
     </script>
 </body>
