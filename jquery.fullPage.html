@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery.fullPage</title>
+    <link rel="stylesheet" href="./jquery.fullPage.css">
+    <style>
+        .wrap {}
+        .wrap .bg {height:100vh;}
+        .wrap .bg:nth-child(1) {background-color:lavender;}
+        .wrap .bg:nth-child(2) {background-color:lemonchiffon;}
+        .wrap .bg:nth-child(3) {background-color:papayawhip;}
+        .wrap .bg:nth-child(4) {background-color:peachpuff;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bg section s1"></div>
+        <div class="bg section s2"></div>
+        <div class="bg section s3"></div>
+        <div class="bg section s4"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./jquery.fullPage.js"></script>
+    <script>
+        $('.wrap').fullpage({
+            scrollBar:true,
+            scrollingSpeed:500,
+        })
+    </script>
+</body>
+</html>
